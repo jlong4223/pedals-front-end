@@ -1,6 +1,8 @@
+import './Footer.css'
+
 const Footer = (props)=>{
     return(
-        <footer>Footer</footer>
+    <footer className="Footer">Copyright &copy; Pedals {new Date().getFullYear()} All Rights Reserved</footer>
     )
 }
 

@@ -11,8 +11,10 @@ import {fetchBikeData} from './services/bike-api'
 import HomePage from './pages/HomePage/HomePage'
 import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage/LoginPage';
+import DashboardPage from './pages/DashboardPage/DashboardPage'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+
 
 
 // creates a 404 page function
@@ -48,9 +50,13 @@ function App() {
 
   return (
     <div className="App">
+        <Header />
       <Switch>
         <Route exact path="/" render={()=>
           <HomePage />
+        }/>
+        <Route exact path='/dashboard' render={()=>
+         <DashboardPage />
         }/>
         <Route exact path="/signup" render={props => 
             <SignupPage {...props} />
@@ -60,6 +66,7 @@ function App() {
           }/>
           <Route component={NotFound}/>
       </Switch>
+      <Footer />
     </div>
   );
 }

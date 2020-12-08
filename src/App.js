@@ -15,8 +15,14 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
 
-// TODO create a 404 page function
-
+// creates a 404 page function
+function NotFound(){
+  return(
+  <div>
+    <h1>404 not found</h1>
+  </div>
+  )
+}
 
 
 function App() {
@@ -52,6 +58,7 @@ function App() {
           <Route exact path="/login" render={props => 
             <LoginPage {...props} />
           }/>
+          <Route component={NotFound}/>
       </Switch>
     </div>
   );

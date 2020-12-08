@@ -2,3 +2,6 @@
     margin: 0 10px;
     color: white;
   }
+.NavBar-link:hover{
+    color: white;
+}  

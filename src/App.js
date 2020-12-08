@@ -50,7 +50,7 @@ function App() {
 
   return (
     <div className="App">
-        <Header />
+      <Header />
       <Switch>
         <Route exact path="/" render={()=>
           <HomePage />

@@ -14,8 +14,8 @@ function SignupForm (props) {
   function handleChange(e) {
     props.updateMessage('');
     setFormState(prevState => ({
-      // Using ES2015 Computed Property Names
-      ...prevState,
+        ...prevState,
+        // Using Computed Property Names
       [e.target.name]: e.target.value
     }));
   }

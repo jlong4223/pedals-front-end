@@ -8,7 +8,7 @@ const NavBar = () => {
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <Link to="/signup" className='NavBar-link'>SIGN UP</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
-      <Link to="/signout" className='NavBar-link'>SIGN OUT</Link>
+      <Link to="/logout" className='NavBar-link'>LOG OUT</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <Link to='/dashboard' className='NavBar-link'>DASHBOARD</Link>
     </div>

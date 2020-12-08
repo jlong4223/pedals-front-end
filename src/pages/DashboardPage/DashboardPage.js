@@ -4,7 +4,7 @@ const DashboardPage=(props)=>{
     return(
         <main className="page">
             <h1>Dashboard</h1>
-            <Link to="/">Home</Link>
+            {/* <Link to="/">Home</Link> */}
         </main>
     )
 }

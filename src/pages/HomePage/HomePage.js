@@ -3,10 +3,11 @@ import NavBar from '../../components/NavBar/NavBar'
 
 const HomePage = (props)=>{
     return(
-        <div>
+        <main className="page">
             {/* <Header /> */}
-            <NavBar />
-        </div>
+            {/* <NavBar /> */}
+            <h1>HomePage</h1>
+        </main>
     )
 }
 

@@ -8,12 +8,13 @@ import {Route, Switch, Redirect} from 'react-router-dom'
 import {fetchBikeData} from './services/bike-api'
 import {fetchTrailData} from './services/trails-api'
 
-// TODO import components/pages
+// TODO imported components/pages
 import HomePage from './pages/HomePage/HomePage'
 import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import DashboardPage from './pages/DashboardPage/DashboardPage'
 import BikesPage from './pages/BikesPage/BikesPage'
+import TrailsPage from './pages/TrailsPage/TrailsPage'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
@@ -128,6 +129,15 @@ useEffect(()=>{
             ))}
             </div>
           }/>
+          <Route exact path="/trails" render={props =>
+            <div>
+              {trailData.trails.map((trails, idx)=>(
+                <TrailsPage key={idx} trails={trails}/>
+              ))}
+
+            </div>
+          }/>
+
           <Route component={NotFound}/>
       </Switch>
       <Footer />

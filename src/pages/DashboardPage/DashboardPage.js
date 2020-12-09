@@ -1,17 +1,17 @@
 import {Link} from 'react-router-dom'
+import './Dashboard.css'
 
 const DashboardPage=(props)=>{
     return(
         <main className="page">
-            <h1>Dashboard</h1>
             <div className="homeLinks">
-                <div>
+                <div className="bikelink">
                 <Link to="/bikes">
                    <h1> Bikes Available </h1>
                 </Link>  
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <div>
+                <div className="trailslink">
                 <Link to='/trails'>
                     <h1> Trails </h1>
                 </Link>    

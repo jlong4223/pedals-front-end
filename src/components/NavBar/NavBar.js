@@ -1,16 +1,26 @@
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 
-const NavBar = () => {
-  return (
-    <div className='NavBar'>
-      <Link to="/login" className='NavBar-link'>LOG IN</Link>
+const NavBar = (props) => {
+    // changes the header based on a logged in user
+    let nav = props.user ?
+    <div>
+        <Link to="" className='NavBar-link' onClick={props.handleLogout}>LOG OUT</Link>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <Link to='/dashboard' className='NavBar-link'>DASHBOARD</Link>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+    <span>WELCOME, {props.user.name}!</span>
+    </div>
+    :
+    <div>
+    <Link to="/login" className='NavBar-link'>LOG IN</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <Link to="/signup" className='NavBar-link'>SIGN UP</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
-      <Link to="/logout" className='NavBar-link'>LOG OUT</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <Link to='/dashboard' className='NavBar-link'>DASHBOARD</Link>
+    </div>  
+  return (
+    <div className='NavBar'>
+      {nav}
     </div>
   );
 };

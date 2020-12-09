@@ -24,8 +24,9 @@ function SignupForm (props) {
     e.preventDefault();
     try {
       await signup(formState);
-      // Successfully signed up - show GamePage
-      props.history.push('/');
+    //   props.handleSignUpOrLogin()
+      // Successfully signed up -sends to another page
+      props.history.push('/dashboard');
     } catch (err) {
       // Invalid user data (probably duplicate email)
       props.updateMessage(err.message);

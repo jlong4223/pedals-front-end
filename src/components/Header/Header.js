@@ -8,7 +8,7 @@ const Header=(props)=>{
             <Link to='/'>
                 <h1 className="title">Pedals</h1>
             </Link>
-            <NavBar />
+            <NavBar handleLogout={props.handleLogout} user={props.user} />
         </header>
     )
 }

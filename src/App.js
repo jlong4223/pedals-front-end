@@ -17,6 +17,9 @@ import BikesPage from './pages/BikesPage/BikesPage'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
+// imported services
+import {getUser, logout} from './services/userService'
+
 
 
 // creates a 404 page function
@@ -29,7 +32,22 @@ function NotFound(){
 }
 
 
-function App() {
+function App(props) {
+   //============= User Data ============//
+const [userState, setUserState] = useState({ user: getUser() })
+ 
+function handleSignupOrLogin(){
+  setUserState({ user: getUser()})
+  //push user to another page
+  props.history.push('/dashboard')
+}
+
+function handleLogout(){
+  logout()
+  setUserState({user: null})
+  props.history.push('/')
+}
+
   //============== Bike Data =============//
   const [bikeData, setBikeData]= useState([{
     name: '',
@@ -84,22 +102,21 @@ useEffect(()=>{
   getTrailData()
 },[])
 
-
   return (
     <div className="App">
-      <Header />
+      <Header user={userState.user} handleLogout={handleLogout} />
       <Switch>
         <Route exact path="/" render={()=>
-          <HomePage bikeData={bikeData}/>
+          <HomePage {...props} bikeData={bikeData}/>
         }/>
         <Route exact path='/dashboard' render={()=>
          <DashboardPage />
         }/>
         <Route exact path="/signup" render={props => 
-            <SignupPage {...props} />
+            <SignupPage handleSignupOrLogin={handleSignupOrLogin} {...props} />
           }/>
           <Route exact path="/login" render={props => 
-            <LoginPage {...props} />
+            <LoginPage handleSignupOrLogin={handleSignupOrLogin} {...props} />
           }/>
           <Route exact path="/bikes" render={props =>
             <div>

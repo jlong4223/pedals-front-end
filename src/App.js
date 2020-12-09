@@ -66,7 +66,11 @@ function App() {
             <LoginPage {...props} />
           }/>
           <Route exact path="/bikes" render={props =>
-            <BikesPage bikeData={bikeData}/>
+            <div>
+            {bikeData.map((bikes, idx)=>(
+              <BikesPage key={idx} bikes={bikes} />
+            ))}
+            </div>
           }/>
           <Route component={NotFound}/>
       </Switch>

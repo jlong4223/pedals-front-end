@@ -10,6 +10,7 @@ const NavBar = (props) => {
       <Link to='/dashboard' className='NavBar-link'>DASHBOARD</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
     <span>WELCOME, {props.user.name}!</span>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
     </div>
     :
     <div>

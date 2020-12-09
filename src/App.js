@@ -2,10 +2,11 @@ import './App.css';
 
 // imports hooks
 import {useState, useEffect} from 'react'
-import {Link, Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 
-// TODO import DB / API functions
+// import DB / API functions
 import {fetchBikeData} from './services/bike-api'
+import {fetchTrailData} from './services/trails-api'
 
 // TODO import components/pages
 import HomePage from './pages/HomePage/HomePage'
@@ -29,7 +30,7 @@ function NotFound(){
 
 
 function App() {
-
+  //============== Bike Data =============//
   const [bikeData, setBikeData]= useState([{
     name: '',
     type: '',
@@ -39,15 +40,50 @@ function App() {
     availableTill: '',
     imgURL: ''
   }])
-
   async function getData(){
     const data = await fetchBikeData()
     setBikeData(data)
   }
-
   useEffect(()=>{
     getData()
   },[])
+
+  //============== Trail Data =============//
+const [trailData, setTrailData] = useState([{
+  trails:[{
+    name: '',
+    type: '',
+    summary: '',
+    difficulty: '',
+    stars:'',
+    starVotes:'',
+    location:'',
+    url:'',
+    imgSqSmall: "",
+    imgSmall: "",
+    imgSmallMed: "",
+    imgMedium: "",
+    length: null,
+    ascent: null,
+    descent: null,
+    high: null,
+    low: null,
+    longitude: null,
+    latitude: null,
+    conditionStatus: "",
+    conditionDetails: null,
+    conditionDate: ""
+  }], 
+    success: null
+}])
+async function getTrailData(){
+  const trailData = await fetchTrailData()
+  setTrailData(trailData)
+}
+useEffect(()=>{
+  getTrailData()
+},[])
+
 
   return (
     <div className="App">

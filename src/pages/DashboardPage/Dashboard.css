@@ -4,6 +4,12 @@
     align-items: center;
     justify-content: center;
 }
+
+.homeLinks a{
+    text-decoration: none;
+    color: black;
+}
+
 .bikelink, .trailslink{
     border: 1px solid black;
     height: 350px;

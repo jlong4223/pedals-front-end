@@ -5,17 +5,18 @@ const DashboardPage=(props)=>{
     return(
         <main className="page">
             <div className="homeLinks">
-                <div className="bikelink">
+                
                 <Link to="/bikes">
+                <div className="bikelink">
                    <h1> Bikes Available </h1>
+                </div>
                 </Link>  
-                </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <div className="trailslink">
                 <Link to='/trails'>
+                <div className="trailslink">
                     <h1> Trails </h1>
-                </Link>    
                 </div>
+                </Link>    
             </div>
         </main>
     )

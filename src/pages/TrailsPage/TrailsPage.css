@@ -1,6 +1,35 @@
+.entirepage{
+    display: flex;
+    justify-content: center;
+}
+
 .TrailsPage{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
+    border: 1px solid black;
+    width: 850px;
+    height: 450px;
+}
+
+.picandname{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+    height: 350px;
+    /* border: 1px solid black; */
+}
+
+.trailname{
+    /* font-size: 30px; */
+    /* border: 1px solid black; */
+    width: 350px;
+}
+
+.details{
+    /* border: 1px solid black; */
+    width: 350px;
 }

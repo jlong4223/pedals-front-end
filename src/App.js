@@ -15,6 +15,7 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import DashboardPage from './pages/DashboardPage/DashboardPage'
 import BikesPage from './pages/BikesPage/BikesPage'
 import TrailsPage from './pages/TrailsPage/TrailsPage'
+import NewBikePage from './pages/NewBikePage/NewBikePage'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
@@ -122,6 +123,11 @@ useEffect(()=>{
           <Route exact path="/login" render={props => 
             <LoginPage handleSignupOrLogin={handleSignupOrLogin} {...props} />
           }/>
+
+          <Route exact path="/newbike" render={props =>
+            <NewBikePage {...props} />  
+          } />
+
           <Route exact path="/bikes" render={props =>
             <div>
             {bikeData.map((bikes, idx)=>(

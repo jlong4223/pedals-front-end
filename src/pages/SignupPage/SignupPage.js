@@ -14,7 +14,7 @@ function SignupPage(props){
 
     return (
       <div className='SignupPage'>
-        <SignupForm {...props} updateMessage={updateMessage} />
+        <SignupForm {...props} handleSignupOrLogin={props.handleSignupOrLogin} updateMessage={updateMessage} />
         <p>{messageState.msg}</p>
       </div>
     );

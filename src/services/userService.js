@@ -17,14 +17,6 @@ function signup(user) {
   .then(({token}) => setToken(token));
 }
 
-function getUser(){
-  return getUserFromToken()
-}
-
-function logout(){
-  return removeToken()
-}
-
 function login(credentials){
   return fetch(BASE_URL + 'login', {
     method: 'POST',
@@ -37,6 +29,14 @@ function login(credentials){
     throw new Error('Bad credentials');
   })
   .then(({token}) => setToken(token));
+}
+
+function getUser(){
+  return getUserFromToken()
+}
+
+function logout(){
+  return removeToken()
 }
 
 export {

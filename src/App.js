@@ -2,7 +2,7 @@ import './App.css';
 
 // imports hooks
 import {useState, useEffect} from 'react'
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch, Redirect} from 'react-router-dom'
 
 // import DB / API functions
 import {fetchBikeData} from './services/bike-api'
@@ -110,7 +110,10 @@ useEffect(()=>{
           <HomePage {...props} bikeData={bikeData}/>
         }/>
         <Route exact path='/dashboard' render={()=>
+        getUser() ?
          <DashboardPage />
+         :
+         <Redirect to="/login" />
         }/>
         <Route exact path="/signup" render={props => 
             <SignupPage handleSignupOrLogin={handleSignupOrLogin} {...props} />

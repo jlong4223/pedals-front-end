@@ -24,7 +24,7 @@ function SignupForm (props) {
     e.preventDefault();
     try {
       await signup(formState);
-    //   props.handleSignUpOrLogin()
+      props.handleSignupOrLogin()
       // Successfully signed up -sends to another page
       props.history.push('/dashboard');
     } catch (err) {
@@ -37,7 +37,7 @@ function SignupForm (props) {
     return !(formState.name && formState.email && formState.password === formState.passwordConf);
   }
     return (
-      <div>
+      <div className="page">
         <header className="header-footer">Sign Up</header>
         <form className="form-horizontal" onSubmit={handleSubmit} >
           <div className="form-group">

@@ -12,6 +12,7 @@ import HomePage from './pages/HomePage/HomePage'
 import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import DashboardPage from './pages/DashboardPage/DashboardPage'
+import BikesPage from './pages/BikesPage/BikesPage'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
@@ -53,7 +54,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" render={()=>
-          <HomePage />
+          <HomePage bikeData={bikeData}/>
         }/>
         <Route exact path='/dashboard' render={()=>
          <DashboardPage />
@@ -63,6 +64,9 @@ function App() {
           }/>
           <Route exact path="/login" render={props => 
             <LoginPage {...props} />
+          }/>
+          <Route exact path="/bikes" render={props =>
+            <BikesPage bikeData={bikeData}/>
           }/>
           <Route component={NotFound}/>
       </Switch>

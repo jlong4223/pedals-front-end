@@ -132,7 +132,7 @@ useEffect(()=>{
           } />
 
           <Route exact path="/bikes" render={props =>
-            <div>
+            <div className="bikes">
             {bikeData.map((bikes, idx)=>(
               <BikesPage key={idx} bikes={bikes} />
             ))}

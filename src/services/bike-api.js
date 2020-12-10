@@ -5,3 +5,10 @@ export function fetchBikeData(){
     return fetch(BASE_URL).then(res=>res.json())
 }
 
+export function addBikeData(bikes){
+    return fetch(BASE_URL + '/bikes',{
+        method: 'POST',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify(bikes)
+    }).then(res => res.json())
+}

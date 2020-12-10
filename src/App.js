@@ -125,7 +125,7 @@ useEffect(()=>{
           }/>
 
           <Route exact path="/newbike" render={props =>
-            <NewBikePage setBikeData={setBikeData} {...props} />  
+            <NewBikePage bikeData={bikeData} setBikeData={setBikeData}{...props} />  
           } />
 
           <Route exact path="/bikes" render={props =>

@@ -2,9 +2,6 @@ import {useState} from 'react'
 import {Link} from 'react-router-dom'
 import{addBikeData} from '../../services/bike-api'
 
-// question do I need to have state here and have a setState?
-
-
 const NewBikePage = (props)=>{
     
     const [formState, setFormState]= useState([{
@@ -17,26 +14,6 @@ const NewBikePage = (props)=>{
         imgURL: ''
       }])
 
-    
-    async function postData(e,bikes){  
-        e.preventDefault()
-        try{
-            let result = await fetch('http://localhost:3001/bikes', {
-                method: 'POST', 
-                mode: 'no-cors', 
-                headers:{
-                    'Accept': 'application/json',
-                    'Content-type': 'application/json'
-                },
-                body: JSON.stringify({bikes})
-            })
-            console.log('Result' + result)
-            // props.history.push('/bikes')
-        } catch(e){
-            console.log(e)
-        }
-    }
-
     function handleChange(e) {
         setFormState(prevState => ({
             ...prevState,
@@ -44,21 +21,20 @@ const NewBikePage = (props)=>{
           [e.target.name]: e.target.value
         }));
       }
-
+// TODO change the prevent default and let it reload?
     async function handleSubmit(e){
         e.preventDefault()
         try {
             await addBikeData(formState);
             // props.history.push('/');
           } catch (e) {
-            console.log(postData)
+            console.log(addBikeData)
           }
     }
 
     return(
         <div className="page">
             <header>List your bike</header>
-            {/* <form className="form-horizontal" onSubmit={postData} > */}
             <form className="form-horizontal" onSubmit={handleSubmit} >
                 <div className="form-group">
                     <div className="col-sm-12">
@@ -67,32 +43,32 @@ const NewBikePage = (props)=>{
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='type' name='type' value={props.bikeData.type} onChange={handleChange}/>
+                        <input type='text' placeholder='type' name='type' value={formState.type} onChange={handleChange}/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='location' name='location' value={props.bikeData.location} onChange={handleChange}/>
+                        <input type='text' placeholder='location' name='location' value={formState.location} onChange={handleChange}/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='brand' name='brand' value={props.bikeData.brand} onChange={handleChange}/>
+                        <input type='text' placeholder='brand' name='brand' value={formState.brand} onChange={handleChange}/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='size' name='size' value={props.bikeData.size} onChange={handleChange}/>
+                        <input type='text' placeholder='size' name='size' value={formState.size} onChange={handleChange}/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='availableTill' name='availableTill' value={props.bikeData.availableTill} onChange={handleChange} />
+                        <input type='text' placeholder='availableTill' name='availableTill' value={formState.availableTill} onChange={handleChange} />
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='imgURL' name='imgURL' value={props.bikeData.imgURL} onChange={handleChange}/>
+                        <input type='text' placeholder='imgURL' name='imgURL' value={formState.imgURL} onChange={handleChange}/>
                     </div>
                 </div>
                 <div className="form-group">

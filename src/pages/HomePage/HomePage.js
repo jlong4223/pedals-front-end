@@ -4,7 +4,8 @@ import About from '../../components/About/About'
 
 const HomePage = (props)=>{
     return(
-        <main className="page">
+
+        <main className="homepage">
             <div>
                 <About />
             </div>

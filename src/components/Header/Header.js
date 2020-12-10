@@ -6,7 +6,7 @@ const Header=(props)=>{
     return(
         <header className="Header">
             <Link to='/'>
-                <h1 className="title">Pedals</h1>
+                <h1 className="title"><i class="fas fa-biking"></i> Pedals</h1>
             </Link>
             <NavBar handleLogout={props.handleLogout} user={props.user} />
         </header>

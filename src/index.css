@@ -22,6 +22,7 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: whitesmoke;
 }
 
 .page > h1 {

@@ -20,7 +20,15 @@
     align-items: center;
     margin: 10px;
     border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  transition: box-shadow 0.1s ease-in-out;
 }
+
+.bikelink:hover ,.trailslink:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.9);
+    transform: scale(1.1, 1.1);
+}
+
 .bikelink a, .trailslink a{
     text-decoration: none;
     color: black;

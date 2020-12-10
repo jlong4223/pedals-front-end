@@ -27,13 +27,16 @@
 }
 
 .bikelink{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)),
-        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvQdYlToZGqV2QoKhBjkg4g-QtYyeLfeF4ww&usqp=CAU');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+        url('https://wallpaperaccess.com/full/333323.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+/* background options: 
+https://wallpaperaccess.com/full/333323.jpg
+https://wallpaperaccess.com/full/333429.jpg 
+*/
 .trailslink{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)),

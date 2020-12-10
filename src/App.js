@@ -13,7 +13,6 @@ import HomePage from './pages/HomePage/HomePage'
 import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import DashboardPage from './pages/DashboardPage/DashboardPage'
-// TODO add a link to the bikes and trails page on the home page
 import BikesPage from './pages/BikesPage/BikesPage'
 import TrailsPage from './pages/TrailsPage/TrailsPage'
 import NewBikePage from './pages/NewBikePage/NewBikePage'

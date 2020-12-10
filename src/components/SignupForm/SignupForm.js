@@ -26,7 +26,7 @@ function SignupForm (props) {
       await signup(formState);
       props.handleSignupOrLogin()
       // Successfully signed up -sends to another page
-      props.history.push('/dashboard');
+      props.history.push('/');
     } catch (err) {
       // Invalid user data (probably duplicate email)
       props.updateMessage(err.message);

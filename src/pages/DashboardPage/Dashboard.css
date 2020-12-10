@@ -8,7 +8,7 @@
 
 .homeLinks a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .bikelink, .trailslink{
@@ -29,10 +29,9 @@
 .bikelink{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)),
-        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBu1jtHXyxT-aOTBGi8bV61PqQhN6WYHGLiQ&usqp=CAU');
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvQdYlToZGqV2QoKhBjkg4g-QtYyeLfeF4ww&usqp=CAU');
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
 }
 
 .trailslink{
@@ -41,5 +40,4 @@
         url('https://wallpaperaccess.com/full/465036.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
 }

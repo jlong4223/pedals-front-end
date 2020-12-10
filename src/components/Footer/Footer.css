@@ -1,6 +1,11 @@
 .Footer{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 50px;
+}
+
+.Footer a{
+    font-size: 25px;
+    color: black;
 }

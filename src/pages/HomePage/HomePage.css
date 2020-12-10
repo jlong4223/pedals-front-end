@@ -3,12 +3,12 @@
     flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   color: white;
 background-image: linear-gradient(rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.6)),
-        url('https://blog.trekbikes.com/wp-content/uploads/2020/04/SN_Trek_CatalinaIsland_513.jpg');
+        url('https://i.imgur.com/fK3quNO.png ');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -16,3 +16,7 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.6),
 /* https://image.freepik.com/free-photo/girl-bike-background-sunset_99433-4404.jpg */
 
 /* https://blog.trekbikes.com/wp-content/uploads/2020/04/SN_Trek_CatalinaIsland_513.jpg*/
+
+/* https://i.imgur.com/fK3quNO.png */
+
+/* https://wallup.net/wp-content/uploads/2016/03/01/302824-nature-bicycle-748x478.jpg */

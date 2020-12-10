@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import{addBikeData} from '../../services/bike-api'
 
-// question do I need to have state here?
+// question do I need to have state here and have a setState?
 
 async function handleSubmit(e){
     e.preventDefault()

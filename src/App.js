@@ -58,7 +58,8 @@ function handleLogout(){
     brand: '',
     size: '',
     availableTill: '',
-    imgURL: ''
+    imgURL: '', 
+    contact: ''
   }])
   async function getData(){
     const data = await fetchBikeData()

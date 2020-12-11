@@ -4,6 +4,11 @@
     background-color: whitesmoke;
 }
 
+.entirepage a{
+    color: black;
+    text-decoration: none;
+}
+
 .TrailsPage{
     display: flex;
     justify-content: center;
@@ -41,4 +46,10 @@
 .details{
     /* border: 1px solid black; */
     width: 350px;
+}
+
+.infologo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

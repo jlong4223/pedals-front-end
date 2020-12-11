@@ -38,37 +38,37 @@ const NewBikePage = (props)=>{
             <form className="form-horizontal" onSubmit={handleSubmit} >
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='bike name' name='name' value={formState.name} onChange={handleChange} />
+                        <input type='text' placeholder='bike name' name='name' value={formState.name} onChange={handleChange} required/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='type of bike' name='type' value={formState.type} onChange={handleChange}/>
+                        <input type='text' placeholder='type of bike' name='type' value={formState.type} onChange={handleChange} required/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='location/zip' name='location' value={formState.location} onChange={handleChange}/>
+                        <input type='text' placeholder='location/zip' name='location' value={formState.location} onChange={handleChange} required/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='brand' name='brand' value={formState.brand} onChange={handleChange}/>
+                        <input type='text' placeholder='brand' name='brand' value={formState.brand} onChange={handleChange} required/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='size' name='size' value={formState.size} onChange={handleChange}/>
+                        <input type='text' placeholder='size' name='size' value={formState.size} onChange={handleChange} required/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='Last day available' name='availableTill' value={formState.availableTill} onChange={handleChange} />
+                        <input type='text' placeholder='Last day available' name='availableTill' value={formState.availableTill} onChange={handleChange} required/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='image URL' name='imgURL' value={formState.imgURL} onChange={handleChange}/>
+                        <input type='text' placeholder='image URL' name='imgURL' value={formState.imgURL} onChange={handleChange} required/>
                     </div>
                 </div>
                 <div className="form-group">

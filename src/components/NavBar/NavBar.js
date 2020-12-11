@@ -4,7 +4,7 @@ import './NavBar.css';
 const NavBar = (props) => {
     // changes the header based on a logged in user
     let nav = props.user ?
-    <div>
+    <div className="navdiv">
         <Link to="" className='NavBar-link' onClick={props.handleLogout}>LOG OUT</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <Link to='/dashboard' className='NavBar-link'>DASHBOARD</Link>
@@ -15,7 +15,7 @@ const NavBar = (props) => {
     &nbsp;&nbsp;|&nbsp;&nbsp;
     </div>
     :
-    <div>
+    <div className="navdiv">
       <Link to="/bikes" className='NavBar-link'>SEE BIKES</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <Link to="/trails" className='NavBar-link'>SEE TRAILS</Link>

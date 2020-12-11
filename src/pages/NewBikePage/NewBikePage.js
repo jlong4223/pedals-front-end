@@ -11,7 +11,8 @@ const NewBikePage = (props)=>{
         brand: '',
         size: '',
         availableTill: '',
-        imgURL: ''
+        imgURL: '', 
+        contact: ''
       }])
 
     function handleChange(e) {
@@ -64,6 +65,11 @@ const NewBikePage = (props)=>{
                 <div className="form-group">
                     <div className="col-sm-12">
                         <input type='text' placeholder='Last day available' name='availableTill' value={formState.availableTill} onChange={handleChange} required/>
+                    </div>
+                </div>
+                <div className="form-group">
+                    <div className="col-sm-12">
+                        <input type='text' placeholder='Phone or email' name='contact' value={formState.contact} onChange={handleChange} required/>
                     </div>
                 </div>
                 <div className="form-group">

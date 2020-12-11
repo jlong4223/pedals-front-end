@@ -48,3 +48,4 @@
 - messaging within the app
 - reserving within the app
 - adjust styles for small screens
+- use modal or add page for bike clicked on

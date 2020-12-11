@@ -29,12 +29,12 @@ const Header=(props)=>{
           return () => {
             window.removeEventListener("scroll", scrollCallBack);
           };
-        }, []);
+        });
 
     return(
         <header className="Header">
             <Link to='/'>
-                <h1 className="title" id='myHeader'><i class="fas fa-biking"></i> Pedals</h1>
+                <h1 className="title" id='myHeader'><i className="fas fa-biking"></i> Pedals</h1>
             </Link>
             <NavBar handleLogout={props.handleLogout} user={props.user} />
         </header>

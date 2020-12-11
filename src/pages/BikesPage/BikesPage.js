@@ -9,7 +9,7 @@ const BikesPage = (props)=>{
             <h5>{props.bikes.brand}</h5>
             <h5>{props.bikes.type}</h5>
             <h5>{props.bikes.size}</h5>
-            <h6>Contact: <em>{props.bikes.contact}</em></h6>
+            <h6><i className="fas fa-address-book fa-lg"></i> <em>{props.bikes.contact}</em></h6>
             </div>
         </div>
     )

@@ -23,10 +23,10 @@ const NewBikePage = (props)=>{
       }
 // TODO change the prevent default and let it reload?
     async function handleSubmit(e){
-        e.preventDefault()
+        // e.preventDefault()
         try {
             await addBikeData(formState);
-            // props.history.push('/');
+            props.history.push('/dashboard');
           } catch (e) {
             console.log(addBikeData)
           }
@@ -38,17 +38,17 @@ const NewBikePage = (props)=>{
             <form className="form-horizontal" onSubmit={handleSubmit} >
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='name' name='name' value={formState.name} onChange={handleChange} />
+                        <input type='text' placeholder='bike name' name='name' value={formState.name} onChange={handleChange} />
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='type' name='type' value={formState.type} onChange={handleChange}/>
+                        <input type='text' placeholder='type of bike' name='type' value={formState.type} onChange={handleChange}/>
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='location' name='location' value={formState.location} onChange={handleChange}/>
+                        <input type='text' placeholder='location/zip' name='location' value={formState.location} onChange={handleChange}/>
                     </div>
                 </div>
                 <div className="form-group">
@@ -63,12 +63,12 @@ const NewBikePage = (props)=>{
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='availableTill' name='availableTill' value={formState.availableTill} onChange={handleChange} />
+                        <input type='text' placeholder='Last day available' name='availableTill' value={formState.availableTill} onChange={handleChange} />
                     </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-12">
-                        <input type='text' placeholder='imgURL' name='imgURL' value={formState.imgURL} onChange={handleChange}/>
+                        <input type='text' placeholder='image URL' name='imgURL' value={formState.imgURL} onChange={handleChange}/>
                     </div>
                 </div>
                 <div className="form-group">

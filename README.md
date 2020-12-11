@@ -1,6 +1,6 @@
 # Pedals
 
-## Intallation Instructions
+## Intsallation Instructions
 
 ## Technologies Used
 

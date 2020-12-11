@@ -1,9 +1,9 @@
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
 import{addBikeData} from '../../services/bike-api'
+import './NewBikePage.css'
 
 const NewBikePage = (props)=>{
-    
     const [formState, setFormState]= useState([{
         name: '',
         type: '',
@@ -35,8 +35,11 @@ const NewBikePage = (props)=>{
 
     return(
         <div className="page">
-            <header>List your bike</header>
+            <div className='container'>
+            <div className="sidebar"></div>
             <form className="form-horizontal" onSubmit={handleSubmit} >
+                <fieldset className="fieldset">
+                    <legend>List Your Bike</legend>
                 <div className="form-group">
                     <div className="col-sm-12">
                         <input type='text' placeholder='bike name' name='name' value={formState.name} onChange={handleChange} required/>
@@ -83,10 +86,10 @@ const NewBikePage = (props)=>{
                         <button className="btn btn-default">Add Bike</button>&nbsp;&nbsp;
                         <Link to='/dashboard'>Cancel</Link>
                     </div>
-                </div>
-                
+                </div>   
+                </fieldset>
             </form>
-
+            </div>
         </div>
     )
 }

@@ -1,0 +1,29 @@
+.fieldset{
+    border: 1px solid black;
+    height: 467px;
+    border-radius: 0 5px 5px 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar{
+    border: 1px solid black;
+    width: 300px;
+    height: 450px;
+    margin-top: 17px;
+    border-radius: 5px 0 0 5px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)),
+        url('https://s3.amazonaws.com/images.gearjunkie.com/uploads/2020/11/201007_HOLLIDAY_06624-1676x1118.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+legend{
+    background-color: #282c34;
+    color: white;
+    width: 150px;
+}

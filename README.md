@@ -1,7 +1,5 @@
 # Pedals
 
-## Intsallation Instructions
-
 ## Technologies Used
 
 - React.js
@@ -11,19 +9,42 @@
 - FontAwesome
 - Bootstrap
 - Trails API
-- Bikes Node.js & Express API
+- Bikes API (Mongoose, Node.js & Express backend)
 - AJAX
 - MongoDB
 - Token Based Auth
 
 ## Screenshots
 
+### Home Page:
+
+![home](./public/images/home.png)
+
+### Dashboard:
+
+![home](./public/images/dashboard.png)
+
+### Bikes Page:
+
+![home](./public/images/bikes.png)
+
+### Trails Page:
+
+![home](./public/images/trails.png)
+
 ## Wireframes
 
+![app](./public/images/app-wireframe.png)
+
 ## Getting Started
+
+[Click Here]() to see the deployed app.
 
 ## Future Enhancements
 
 - open it up to more cities
 - upload pictures rather than URL
 - Update & Delete functionality
+- messaging within the app
+- reserving within the app
+- adjust styles for small screens

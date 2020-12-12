@@ -6,9 +6,9 @@ import NavBar from '../NavBar/NavBar'
 
 
 const Header=(props)=>{
-    // TODO fixed the sticky header
-    const fixedText = 'Pedals'
-    const whenNotFixed = "jones"
+    // sticky header below
+    const fixedText = 'fixed'
+    const whenNotFixed = "not fixed"
     const [headerText, setHeaderText] = useState(fixedText)
     useEffect(()=>{
         const header = document.getElementById('myHeader')
@@ -32,9 +32,9 @@ const Header=(props)=>{
         });
 
     return(
-        <header className="Header">
+        <header className="Header" id='myHeader'>
             <Link to='/'>
-                <h1 className="title" id='myHeader'><i className="fas fa-biking"></i> Pedals</h1>
+                <h1 className="title"><i className="fas fa-biking"></i> Pedals</h1>
             </Link>
             <NavBar handleLogout={props.handleLogout} user={props.user} />
         </header>

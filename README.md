@@ -24,6 +24,10 @@
 
 ![home](./public/images/dashboard.png)
 
+### Add Bike Page:
+
+![addbike](./public/images/addbike.png)
+
 ### Bikes Page:
 
 ![home](./public/images/bikes.png)

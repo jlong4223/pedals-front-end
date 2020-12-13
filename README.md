@@ -13,6 +13,7 @@
 - AJAX
 - MongoDB
 - Token Based Auth
+- React Modal
 
 ## Screenshots
 

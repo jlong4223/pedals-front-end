@@ -27,7 +27,11 @@ const BikeCardModal = (props)=>{
                         color: '#282c34', 
                         backgroundColor: 'whitesmoke',
                         borderRadius: '5px',
-                        textAlign: 'center'
+                        textAlign: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center'
                     }
                 }
             }

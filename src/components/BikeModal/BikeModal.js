@@ -26,6 +26,7 @@ const BikeCardModal = (props)=>{
                     content: {
                         color: '#282c34', 
                         backgroundColor: 'whitesmoke',
+                        // backgroundImage: `${props.pic}`,
                         borderRadius: '5px',
                         textAlign: 'center',
                         display: 'flex',

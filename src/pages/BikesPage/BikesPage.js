@@ -1,5 +1,4 @@
 import './BikesPage.css'
-
 // TODO use ternary operator for modal here 
 
 const BikesPage = (props)=>{

@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 import NavBar from '../NavBar/NavBar'
 
 
-
 const Header=(props)=>{
     // sticky header below
     const fixedText = 'fixed'

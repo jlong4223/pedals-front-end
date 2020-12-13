@@ -17,11 +17,10 @@ const BikesPage = (props)=>{
                      available={props.bikes.availableTill}
                      /></h6>
                 </div>
-            <img className="bikeimg" src={props.bikes.imgURL} alt="bike" />
-            <h5>{props.bikes.brand}</h5>
-            <h5>{props.bikes.type}</h5>
-            <h5>{props.bikes.size}</h5>
-            {/* <h6><BikeCardModal name={props.bikes.name} contact={props.bikes.contact}/></h6> */}
+                <img className="bikeimg" src={props.bikes.imgURL} alt="bike" />
+                <h5>{props.bikes.brand}</h5>
+                <h5>{props.bikes.type}</h5>
+                <h5>{props.bikes.size}</h5>
             </div>
         </div>
     )

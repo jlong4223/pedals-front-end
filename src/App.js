@@ -18,12 +18,9 @@ import TrailsPage from './pages/TrailsPage/TrailsPage'
 import NewBikePage from './pages/NewBikePage/NewBikePage'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import MyModal from './components/Modal/Modal'
 
 // imported services
 import {getUser, logout} from './services/userService'
-
-
 
 // creates a 404 page function
 function NotFound(){
@@ -33,7 +30,6 @@ function NotFound(){
   </div>
   )
 }
-
 
 function App(props) {
    //============= User Data ============//

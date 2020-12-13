@@ -52,4 +52,6 @@
 - messaging within the app
 - reserving within the app
 - adjust styles for small screens
-- use modal or add page for bike clicked on with dates available and price per day
+- add dates available and price per day on modal
+- fix the modal to be flex or change with screen size
+- flip the card instead of modal for info on the back

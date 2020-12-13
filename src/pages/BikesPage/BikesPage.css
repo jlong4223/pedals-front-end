@@ -23,3 +23,8 @@
   transition: box-shadow 0.2s ease-in-out;
   transform: scale(1.1, 1.1);
 }
+
+.cardTitle{
+  display: flex;
+  justify-content: space-around;
+}

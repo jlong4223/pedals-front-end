@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import Modal from 'react-modal'
+import './BikeModal.css'
 
 Modal.setAppElement('#root')
 
@@ -8,24 +9,32 @@ const BikeCardModal = (props)=>{
     const [modalIsOpen, setModalIsOpen] = useState(false)
 
     return(
-        <div className="">
+        <div>
             <button className='btn btn-default'onClick={()=> setModalIsOpen(true)}> <i className="fas fa-info-circle fa-lg"></i></button>
-            <Modal 
+            <Modal
             isOpen={modalIsOpen} 
             onRequestClose={()=> setModalIsOpen(false)}
             style={
                 {
                     overlay: {
-                        backgroundColor: 'transparent'
+                        backgroundColor: 'transparent',
+                        // position: 'fixed',
+                        // height: '330px',
+                        // width: '350px', 
+                        display: 'flex', 
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginLeft: '450px',
+                        marginTop: '250px'
                     }, 
                     content: {
                         color: '#282c34', 
                         backgroundColor: 'whitesmoke',
                         borderRadius: '5px',
-                        width: '350px',
-                        height: '330px',
-                        marginLeft: '450px',
-                        marginTop: '250px'
+                        // width: '350px',
+                        // height: '330px',
+                        // marginLeft: '450px',
+                        // marginTop: '250px'
                     }
                 }
             }

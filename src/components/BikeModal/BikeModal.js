@@ -17,31 +17,26 @@ const BikeCardModal = (props)=>{
             style={
                 {
                     overlay: {
-                        backgroundColor: 'transparent',
-                        // position: 'fixed',
-                        // height: '330px',
-                        // width: '350px', 
+                        backgroundColor: 'transparent', 
                         display: 'flex', 
                         alignItems: 'center',
                         justifyContent: 'center',
-                        marginLeft: '450px',
-                        marginTop: '250px'
+                        margin: '100px 200px 100px 200px'
                     }, 
                     content: {
                         color: '#282c34', 
                         backgroundColor: 'whitesmoke',
                         borderRadius: '5px',
-                        // width: '350px',
-                        // height: '330px',
-                        // marginLeft: '450px',
-                        // marginTop: '250px'
+                        textAlign: 'center'
                     }
                 }
             }
             >
-               <h2>Bike Details</h2>
-                <h3>{props.name}</h3>
-                <h4><i className="fas fa-dollar-sign"></i>: $_/day</h4>
+               <h1>Details</h1>
+                <h3>{props.brand} {props.name}</h3>
+                <img className="bikeimg" src={props.pic} alt="bike" />
+                <h4>Last day available: {props.available}</h4>
+                <h4><i className="fas fa-dollar-sign"></i>: $30/day</h4>
                 <h5><i className="fas fa-address-book fa-lg"></i> <em>{props.contact}</em></h5>
                <button className="btn btn-default"onClick={()=> setModalIsOpen(false)}>Close</button>
             </Modal>

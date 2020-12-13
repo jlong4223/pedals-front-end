@@ -9,7 +9,7 @@ const MyModal = (props)=>{
 
     return(
         <div className="">
-            <button className='btn btn-default'onClick={()=> setModalIsOpen(true)}> <i class="fas fa-question-circle fa-lg"></i></button>
+            <button className='btn btn-default'onClick={()=> setModalIsOpen(true)}> <i className="fas fa-question-circle fa-lg"></i></button>
             <Modal 
             isOpen={modalIsOpen} 
             onRequestClose={()=> setModalIsOpen(false)}

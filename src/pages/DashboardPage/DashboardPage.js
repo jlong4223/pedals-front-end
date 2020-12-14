@@ -8,7 +8,7 @@ const DashboardPage=(props)=>{
                 
                 <Link to="/bikes">
                 <div className="bikelink">
-                   <h1> Bikes Available </h1>
+                   <h1> Bike Rentals </h1>
                 </div>
                 </Link>  
                 &nbsp;&nbsp;&nbsp;&nbsp;

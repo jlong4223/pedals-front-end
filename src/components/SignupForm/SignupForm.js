@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { signup } from '../../services/userService'
+import './SignupForm.css'
 
 function SignupForm (props) {
 
@@ -38,26 +39,40 @@ function SignupForm (props) {
   }
     return (
       <div className="page">
-        <header className="header-footer">Sign Up</header>
+        <div className="container">
         <form className="form-horizontal" onSubmit={handleSubmit} >
+          <fieldset className='signupfield'>
+            <legend>Sign Up</legend>
           <div className="form-group">
             <div className="col-sm-12">
-              <input type="text" className="form-control" placeholder="Name" value={formState.name} name="name" onChange={handleChange} />
+              <div className="namebox">
+                <h3 className='icons'><i className="fas fa-user"></i></h3>
+                <input type="text" className="form-control" placeholder="Name" value={formState.name} name="name" onChange={handleChange} />
+                </div>
             </div>
           </div>
           <div className="form-group">
             <div className="col-sm-12">
+              <div className='emailbox'>
+                <h3 className='icons'><i className="fas fa-envelope-square"></i></h3>
               <input type="email" className="form-control" placeholder="Email" value={formState.email} name="email" onChange={handleChange} />
+              </div>
             </div>
           </div>
           <div className="form-group">
             <div className="col-sm-12">
+              <div className='keybox'>
+              <h3 className='icons'><i className="fas fa-key"></i></h3>
               <input type="password" className="form-control" placeholder="Password" value={formState.password} name="password" onChange={handleChange} />
+              </div>
             </div>
           </div>
           <div className="form-group">
             <div className="col-sm-12">
+            <div className='keybox'>
+              <h3 className='icons'><i className="fas fa-check"></i></h3>
               <input type="password" className="form-control" placeholder="Confirm Password" value={formState.passwordConf} name="passwordConf" onChange={handleChange} />
+              </div>
             </div>
           </div>
           <div className="form-group">
@@ -65,8 +80,11 @@ function SignupForm (props) {
               <button className="btn btn-default" disabled={isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
               <Link to='/'>Cancel</Link>
             </div>
+            <h6>Have an account? <Link to='/login'>Login</Link></h6>
           </div>
+          </fieldset>
         </form>
+        </div>
       </div>
     );
 }

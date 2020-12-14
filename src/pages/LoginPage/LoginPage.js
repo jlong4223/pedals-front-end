@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {login} from '../../services/userService'
+import "./LoginPage.css"
 
 function LoginPage(props) {
   const [formState, setFormState] = useState({
@@ -34,11 +35,15 @@ function LoginPage(props) {
 }
 
   return (
-    <div className="page">
-      <header className="header-footer">Log In</header>
+    <div className="page"> 
+      <div className="container">
       <form className="form-horizontal" onSubmit={handleSubmit}>
+      <fieldset className='loginfield'>
+      <legend>Login</legend>
         <div className="form-group">
           <div className="col-sm-12">
+          <div className='emailbox'>
+                <h3 className='icons'><i className="fas fa-envelope-square"></i></h3>
             <input
               className="form-control"
               type="email"
@@ -47,10 +52,13 @@ function LoginPage(props) {
               value={formState.email}
               onChange={handleChange}
             />
+            </div>
           </div>
         </div>
         <div className="form-group">
           <div className="col-sm-12">
+          <div className='keybox'>
+              <h3 className='icons'><i className="fas fa-key"></i></h3>
             <input
               className="form-control"
               type="password"
@@ -59,6 +67,7 @@ function LoginPage(props) {
               value={formState.password}
               onChange={handleChange}
             />
+            </div>
           </div>
         </div>
         <div className="form-group">
@@ -66,8 +75,11 @@ function LoginPage(props) {
             <button disabled={!formValid()}className="btn btn-default">Log In</button>&nbsp;&nbsp;
               <Link to='/'>Cancel</Link>
           </div>
+          <h6>Don't have an account? <Link to='/signup'>Signup</Link></h6>
         </div>
+        </fieldset>
       </form>
+      </div>
     </div>
   );
 }

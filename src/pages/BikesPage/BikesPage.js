@@ -1,7 +1,7 @@
 import './BikesPage.css'
-// TODO use ternary operator for modal here 
 
-import BikeCardModal from '../../components/BikeModal/BikeModal'
+// ==== Bike Modal Details imported and ready for use if I want to make the switch
+// import BikeCardModal from '../../components/BikeModal/BikeModal'
 
 const BikesPage = (props)=>{
     return(

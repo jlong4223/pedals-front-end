@@ -1,4 +1,4 @@
-// TODO make AJAX requests to my bike back end
+// makes AJAX requests to my bike back end
 const BASE_URL = 'http://localhost:3001/bikes'
 
 export function fetchBikeData(){

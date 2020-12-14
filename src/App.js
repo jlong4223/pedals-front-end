@@ -8,7 +8,7 @@ import {Route, Switch, Redirect} from 'react-router-dom'
 import {fetchBikeData} from './services/bike-api'
 import {fetchTrailData} from './services/trails-api'
 
-// TODO imported components/pages
+// imported components/pages
 import HomePage from './pages/HomePage/HomePage'
 import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage/LoginPage';

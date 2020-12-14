@@ -22,13 +22,13 @@ const NewBikePage = (props)=>{
           [e.target.name]: e.target.value
         }));
       }
-// TODO change the prevent default and let it reload?
-    async function handleSubmit(e){
+
+    async function handleSubmit(e, props){
         // e.preventDefault()
         try {
             await addBikeData(formState);
             props.history.push('/dashboard');
-          } catch (e) {
+        } catch (e) {
             console.log(addBikeData)
           }
     }
@@ -86,6 +86,7 @@ const NewBikePage = (props)=>{
                         <button className="btn btn-default">Add Bike</button>&nbsp;&nbsp;
                         <Link to='/dashboard'>Cancel</Link>
                     </div>
+                    <h6><Link to='/bikes'>See Listings</Link></h6>
                 </div>   
                 </fieldset>
             </form>

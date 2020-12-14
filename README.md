@@ -53,6 +53,4 @@
 - messaging within the app
 - reserving within the app
 - adjust styles for small screens
-- add dates available and price per day on modal
-- fix the modal to be flex or change with screen size
-- flip the card instead of modal for info on the back
+- fix the questions modal to be flex or change with screen size

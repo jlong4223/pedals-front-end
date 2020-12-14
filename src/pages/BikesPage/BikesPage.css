@@ -1,3 +1,7 @@
+.cardTitle{
+  display: flex;
+  justify-content: space-around;
+}
 .bikeimg{
     width: 300px;
     height: auto;
@@ -9,23 +13,52 @@
 
 .bikesCard{
     margin-top: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 10px;
     width: 330px;
     height: 400px;
-    background-color: white;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-  transition: box-shadow 0.2s ease-in-out;
+    /* background-color: white; */
+    box-shadow: 0 1px 9px rgba(0,0,0,0.15);
+    /* transition: box-shadow 0.2s ease-in-out; */
+    
+    /* flip stuff below */
+    transition: transform 0.8s;
+    perspective: 1000px;
+    /* background-color: transparent; */
+  
 }
 
-.bikesCard:hover{
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.bikesCard:hover .flip-card-inner{
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-  transition: box-shadow 0.2s ease-in-out;
-  transform: scale(1.1, 1.1);
-  /* transform: rotateY(180deg) */
+  /* ==== when not using flip card ====== */
+  /* transition: box-shadow 0.2s ease-in-out; */
+  /* transform: scale(1.1, 1.1); */
+  
+  /* flip stuff below */
+  transform: rotateY(180deg);
 }
 
-.cardTitle{
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back{
+  transform: rotateY(180deg);
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

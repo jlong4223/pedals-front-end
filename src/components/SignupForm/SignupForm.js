@@ -38,7 +38,7 @@ function SignupForm (props) {
     return !(formState.name && formState.email && formState.password === formState.passwordConf);
   }
     return (
-      <div className="page">
+      <div className="page signuppage">
         <div className="container">
         <form className="form-horizontal" onSubmit={handleSubmit} >
           <fieldset className='signupfield'>

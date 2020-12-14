@@ -24,9 +24,10 @@ const BikeCardModal = (props)=>{
                         margin: '100px 200px 100px 200px'
                     }, 
                     content: {
-                        color: '#282c34', 
+                        color: 'black', 
                         backgroundColor: 'whitesmoke',
-                        // backgroundImage: `${props.pic}`,
+                        // backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i.imgur.com/p1XvZZw.jpg')",
+                        backgroundSize: 'cover',  
                         borderRadius: '5px',
                         textAlign: 'center',
                         display: 'flex',
@@ -43,7 +44,7 @@ const BikeCardModal = (props)=>{
                 <h4>Last day available: {props.available}</h4>
                 <h4><i className="fas fa-dollar-sign"></i>: $30/day</h4>
                 <h5><i className="fas fa-address-book fa-lg"></i> <em>{props.contact}</em></h5>
-               <button className="btn btn-default"onClick={()=> setModalIsOpen(false)}>Close</button>
+               <button className="btn btn-default closebtn"onClick={()=> setModalIsOpen(false)}>Close</button>
             </Modal>
         </div>
     )

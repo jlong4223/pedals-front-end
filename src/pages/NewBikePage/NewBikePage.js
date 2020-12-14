@@ -25,7 +25,7 @@ const NewBikePage = (props)=>{
 
     async function handleSubmit(e){
         //comment out default to let refresh?
-        e.preventDefault()
+        // e.preventDefault()
         try {
             await addBikeData(formState);
             props.handleNewBike()

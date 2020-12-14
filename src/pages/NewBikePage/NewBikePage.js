@@ -23,11 +23,12 @@ const NewBikePage = (props)=>{
         }));
       }
 
-    async function handleSubmit(e, props){
-        // e.preventDefault()
+    async function handleSubmit(e){
+        //comment out default to let refresh?
+        e.preventDefault()
         try {
             await addBikeData(formState);
-            props.history.push('/dashboard');
+            props.handleNewBike()
         } catch (e) {
             console.log(addBikeData)
           }

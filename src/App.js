@@ -66,6 +66,9 @@ function handleLogout(){
     getData()
   },[])
 
+  function handleNewBike(){
+    props.history.push('/dashboard')
+  }
   //============== Trail Data =============//
 const [trailData, setTrailData] = useState([{
   trails:[{
@@ -124,7 +127,7 @@ useEffect(()=>{
 
           <Route exact path="/newbike" render={props =>
             getUser() ?
-            <NewBikePage bikeData={bikeData} setBikeData={setBikeData}{...props} />  
+            <NewBikePage bikeData={bikeData} setBikeData={setBikeData} handleNewBike={handleNewBike} {...props} />  
             :
             <Redirect to='/login' />
           } />

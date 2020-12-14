@@ -1,7 +1,8 @@
 import {setToken, getUserFromToken, removeToken} from './tokenService'
 
+// const BASE_URL = 'http://localhost:3001/users/'
+const BASE_URL = 'https://pedals-backend.herokuapp.com/users/'
 
-const BASE_URL = 'http://localhost:3001/users/';
 
 function signup(user) {
   return fetch(BASE_URL + 'signup', {

@@ -14,6 +14,8 @@
 - MongoDB
 - Token Based Auth
 - React Modal
+- Heroku
+- Netlify
 
 ## Screenshots
 

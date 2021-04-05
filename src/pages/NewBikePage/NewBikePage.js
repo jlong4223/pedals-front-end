@@ -4,20 +4,17 @@ import { addBikeData } from "../../services/bike-api";
 import "./NewBikePage.css";
 
 const NewBikePage = (props) => {
-  const [formState, setFormState] = useState([
-    {
-      name: "",
-      type: "",
-      location: "",
-      brand: "",
-      size: "",
-      availableTill: "",
-      imgURL: "",
-      contact: "",
-      //   TODO add the createdBy to the backend schema
-      //   createdBy: props.userState.user._id,
-    },
-  ]);
+  const [formState, setFormState] = useState({
+    name: "",
+    type: "",
+    location: "",
+    brand: "",
+    size: "",
+    availableTill: "",
+    imgURL: "",
+    contact: "",
+    createdBy: props.userState.user._id,
+  });
 
   function handleChange(e) {
     setFormState((prevState) => ({

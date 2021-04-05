@@ -49,7 +49,8 @@ const BikesPage = (props) => {
               <i className="fas fa-address-book fa-lg"></i>{" "}
               <em>{props.bikes.contact}</em>
             </h5>
-            {props.userState.user ? (
+            {props.userState.user &&
+            props.userState.user._id === props.bikes.createdBy ? (
               <button
                 className="btn btn-danger"
                 onClick={() => handleDelete(props.bikes)}

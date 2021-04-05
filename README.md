@@ -1,5 +1,8 @@
 # Pedals
 
+A React.js frontend app that allows you to see local bikes for rent as well as list your own bike. The user can also browse some local trails.
+A user also has ability to delete bikes if they are the creator.
+
 ## Technologies Used
 
 - React.js

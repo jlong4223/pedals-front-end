@@ -12,7 +12,7 @@ const NewBikePage = (props) => {
     size: "",
     availableTill: "",
     imgURL: "",
-    contact: "",
+    contact: props.userState.user.email,
     createdBy: props.userState.user._id,
   });
 

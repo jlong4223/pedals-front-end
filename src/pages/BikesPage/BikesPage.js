@@ -47,7 +47,9 @@ const BikesPage = (props) => {
             </h5>
             <h5>
               <i className="fas fa-address-book fa-lg"></i>{" "}
-              <em>{props.bikes.contact}</em>
+              <a href="mailto:jlong4223@gmail.com">
+                <em>{props.bikes.contact}</em>
+              </a>
             </h5>
             {props.userState.user &&
             props.userState.user._id === props.bikes.createdBy ? (
